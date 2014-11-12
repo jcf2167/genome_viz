@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <script src="jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="jquery.leanModal.min.js"></script>
+
+    <title>three.js webgl - interactive cubes (gpu)</title>
+    <meta charset="utf-8">
+    <meta content=
+    "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    name="viewport">
+    <style>
+        body {
+                font-family: Monospace;
+                background-color: #f0f0f0;
+                margin: 0px;
+                overflow: hidden;
+            }
+
+            .info {
+                position: absolute;
+                background-color: black;
+                opacity: 0.8;
+                color: white;
+                text-align: center;
+                top: 0px;
+                width: 100%;
+            }
+
+            .info a {
+                color: #00ffff;
+            }
+    </style>
+</head>
+
+<body>
+    <link href="style.css" rel="stylesheet">
+
+   <!-- <div style="text-align: center">-->
+    <!--   
+     <button class="btn btn-smaller btn-outline" onclick="addNode()">Add Node</button> 
+        <button class="btn btn-smaller btn-outline">Button</button>
+        <button class="btn btn-smaller btn-outline">Button</button>
+    </div> -->
+
+<div align="center"> <a class="btn" href="#modal" id="modal_trigger">Add Node</a>
+</div>
+
+<div id="modal" class="popupContainer" style="display:none;">
+ <header class="popupHeader">
+ <span class="header_title">Add Node</span>
+ <span class="modal_close"><i class="fa fa-times"></i></span>
+ </header>
+ 
+    <section class="popupBody">
+    <div class="user_login">
+        <form>
+            Node name: <input type="text" name="nodename"><br>
+            Gen name: <input type="text" name="generationname"><br>
+            Edge name: <input type="text" name="edgename"><br>
+            Start size: <input type="text" name="startsize"><br>
+            End size: <input type="text" name="endsize"><br>
+            Latitude: <input type="text" name="endsize"><br>
+            Longitude: <input type="text" name="endsize"><br>
+        <div class="action_btns">
+                                <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                                <div align ="center" class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
+        </div>
+               
+    </div>
+
+
+    </section>
+</div>
+<input type="file" name="filename" id="filename">
+    <div id="csvimporthint"></div>
+
+    <script src="three.min.js"></script> 
+    <script src="Detector.js"></script> 
+    <script src="TrackballControls.js"></script> 
+    <script src="stats.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
